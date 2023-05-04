@@ -1,0 +1,95 @@
+### Endpoint 1
+
+GET https://zonapadel.com/users
+
+{
+    "users": [
+    { 
+        "user": "LuisMorales27"
+        "name": "Luis Morales"
+        "age": 27
+    },
+    { 
+        "user": "Humberto44"
+        "name": "Humberto"
+        "age": 44
+    }]
+}
+
+POST https://zonapadel.com/users
+
+Body:
+{
+    "name": "Sarah Gibson"
+    "age": 26
+}
+
+Status Code: 201 (Created)
+{
+    "user": "SarahGibson27"
+    "name": "Sarah Gibson"
+    "age": 26
+}
+
+PUT https://zonapadel.com/users/SarahGibson27
+
+{
+    "age": 27
+}
+
+Status Code 201 (Created)
+
+{
+    "user": "SarahGibson27"
+    "name": "Sarah Gibson"
+    "age": 27
+}
+
+DELETE https://zonapadel.com/users/SarahGibson27
+
+Status Code: 200 (OK)
+
+### Endpoint 2
+
+GET https://zonapadel.com/reservas
+
+{
+    "reservas": [
+    {
+        "cancha": "Primera"
+        "hora": "4 pm"
+        "jugadores": 4
+
+    },
+    {
+        "cancha": "Segunda"
+        "hora": "6 pm"
+        "jugadores": 6
+
+    }]
+}
+
+POST https://zonapadel.com/reservas
+
+Body:
+{
+    "hora": "8 pm"
+    "jugadores": 4
+}
+
+Status Code 201 (Created)
+{
+    "cancha": "Tercera"
+    "hora": "8 pm"
+    "jugadores": 4
+}
+
+PUT https://zonapadel.com/reservas/Tercera
+
+{
+    "hora": "2 pm"
+}
+
+DELETE https://zonapadel.com/reservas/Tercera
+
+Status Code: 200 (OK)
